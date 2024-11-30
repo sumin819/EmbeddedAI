@@ -2,6 +2,7 @@ import torch
 import time
 from torchsummary import summary
 from fvcore.nn import FlopCountAnalysis, parameter_count
+from ptflops import get_model_complexity_info
 
 class ModelEvaluator:
     def __init__(self, model, device=None):
@@ -33,9 +34,15 @@ class ModelEvaluator:
         """
         self.model.eval()
         input_tensor = torch.randn(1, *input_size).to(self.device)
+
+        # FLOPs 계산 및 타입 변환 처리
         flops = FlopCountAnalysis(self.model, input_tensor)
-        print(f"FLOPs: {flops.total() / 1e6:.2f} MFLOPs")
-        return flops.total()
+        total_flops = flops.total()  # FLOPs 계산 결과
+        if isinstance(total_flops, (int, float)):  # 안전한 타입 처리
+            total_flops = float(total_flops)
+        print(f"FLOPs: {total_flops / 1e6:.2f} MFLOPs")
+        return total_flops
+
 
     def evaluate_inference_speed(self, input_size=(3, 112, 112), iterations=100):
         """
