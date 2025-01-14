@@ -13,22 +13,22 @@
 
 - Base 모델
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/f3a72ca0-5198-4cf9-bb32-097d5a7032ca/image.png)
+<img width="251" alt="image" src="https://github.com/user-attachments/assets/88d76dc1-fe55-43b1-a325-9d3273da9f60" />
 - 학습 코드
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/658758a1-1c45-41f5-9311-e6add9b98b4c/image.png)
+<img width="251" alt="image" src="https://github.com/user-attachments/assets/d33c4c3f-87dc-4adb-954c-6e58966f926f" />
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/903c8584-1a88-435a-ab3f-50a0a6a9a5d1/image.png)
+<img width="252" alt="image" src="https://github.com/user-attachments/assets/990ee4de-9bef-4bff-98d5-904c4d1cda44" />
 
 - 테스트 코드
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/8e217108-01b7-483b-95ab-b362437e20ed/image.png)
+<img width="576" alt="image" src="https://github.com/user-attachments/assets/42460138-0116-4913-ac94-a02c8309f581" />
 
 ### (2) inference
 
 젯슨 나노에서 모델을 inference 해 실시간 추론을 시행 
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/e98810e4-dcbd-4217-a4c2-8a0ccebf5791/image.png)
+<img width="551" alt="image" src="https://github.com/user-attachments/assets/95de9536-d58f-4c53-85fd-9d28a362fd61" />
 
 `infer_webcam` 함수
 
@@ -36,7 +36,7 @@
 - 추론 시간(실행 시간)을 측정
 - cv2의 `cascade classifier`를 사용해 얼굴을 먼저 detect한 후, 마스크 착용 여부를 구별
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/a0203baf-4b79-49ab-8350-69d67d2d69d1/image.png)
+<img width="550" alt="image" src="https://github.com/user-attachments/assets/75dcaaaf-fc34-437f-a21d-c58b02245e5d" />
 
 `infer_csi_camera` 함수
 
@@ -45,21 +45,21 @@
 - `GStreamer` 사용
 - cv2의 `cascade classifier`를 사용해 얼굴을 먼저 detect한 후, 마스크 착용 여부를 구별
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/db76ab57-cd7e-48b0-823b-52ad01421aa2/image.png)
+<img width="477" alt="image" src="https://github.com/user-attachments/assets/8ff4f37c-23b1-4fb8-b1d1-15b85529086d" />
 
 `count_parameters` 함수
 
 - 파라미터 개수를 count
 - zero 파라미터와 non-zero 파라미터를 구분
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/d423617f-82e1-4336-b21e-a10cb161fa9e/image.png)
+<img width="473" alt="image" src="https://github.com/user-attachments/assets/78055edb-b954-45bb-8c26-ddc07a615494" />
 
 `calculate_flops` 함수
 
 - `from thop import profile` 사용
 - profile로 구한 것은 MACs 이기 때문에, FLOPs 구하기 위해 macs ***2** 계산
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/67c1cefe-861c-4a2e-aab4-22e856941e20/image.png)
+<img width="429" alt="image" src="https://github.com/user-attachments/assets/63b736dd-3206-433c-8a3a-da5a2ead4423" />
 
 `get_model_size` 함수
 
@@ -73,7 +73,7 @@
 
 `Student` **모델의 설계 간소화**
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/d1504023-f971-4e2b-a2f5-691294c19ded/image.png)
+<img width="286" alt="image" src="https://github.com/user-attachments/assets/7f83fb29-db87-41b0-8387-f2f388142c42" />
 
 `SmallMaskClassifier` **모델의 설계 간소화**:
 
@@ -87,7 +87,7 @@
     - Teacher 모델: 93,954개 파라미터
     - Small 모델: 6,210개 파라미터
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/c60a74eb-ed33-4fa7-8824-bc539c3dc3d2/image.png)
+<img width="332" alt="image" src="https://github.com/user-attachments/assets/6e503a85-6127-477f-8347-25828a94da6b" />
 
 `MediumMaskClassifier` **모델 설계 간소화:**
 
@@ -101,20 +101,20 @@
     - Teacher 모델: 93,954개 파라미터
     - Medium 모델: 53,186개 파라미터
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/67138438-c7e5-4cd7-9b2c-a3f663154c26/image.png)
+<img width="551" alt="image" src="https://github.com/user-attachments/assets/a5a2b636-466d-4650-b079-7c1391004008" />
 
 `Knowledge Distillation` **적용**:
 
 - Teacher 모델에서 얻은 소프트 라벨(출력)을 Student 모델에 전달하여 학습 성능을 유지.
 - Knowledge Distillation을 통해 Student 모델이 Teacher 모델의 지식을 효율적으로 압축 및 학습하도록 설계.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/8823d4fa-da73-47e3-84a2-74d150d6ef4c/image.png)
+<img width="573" alt="image" src="https://github.com/user-attachments/assets/1ab5bbe3-9679-48b1-8811-c47f0c98b2ca" />
 
 - Student Model 학습 코드
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/915c0b5f-05c3-455f-8095-72b6f0d6de92/image.png)
+<img width="552" alt="image" src="https://github.com/user-attachments/assets/2f814dff-9c0a-446b-9b9b-533e70bf2d7d" />
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/3ed88c76-b9bc-41ae-877a-ecfb889f5754/image.png)
+<img width="353" alt="image" src="https://github.com/user-attachments/assets/26d0e238-cddb-42fc-845b-5a5c500a7878" />
 
 - 경량화 전 후의 파라미터 비교
 
@@ -122,7 +122,7 @@
 
 ### training_prune_total.ipynb
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/6468c9dd-1e82-4608-ac0b-b5393f2cfdd7/image.png)
+<img width="552" alt="image" src="https://github.com/user-attachments/assets/99ff7ab1-59c0-44e8-888c-10c2cd35ad1e" />
 
 `apply_pruning` 함수:
 
@@ -131,7 +131,7 @@
 - 마지막 분류 층(classifier)은 프루닝에서 제외
 - 30%, 50%, 70% 로 Pruning Ratio를 다르게 해 경량화
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/c3baa3fc-9808-4aa2-be6e-1305d189fdb1/image.png)
+<img width="552" alt="image" src="https://github.com/user-attachments/assets/be39dce8-db40-4618-a05c-ec8ed3439a53" />
 
 - 경량화 전 후의 파라미터 비교
 
@@ -140,24 +140,19 @@
 ## (1) Distillation Model
 
 - 잿슨나노의 CSI 카메라 사용 시의 추론 시간 비교
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/bc7c7bb4-52b5-4fa7-bb5c-a0ef96803a6c/image.png)
+<img width="356" alt="image" src="https://github.com/user-attachments/assets/ab9c0949-99e2-46e9-8966-6e1f135bcfda" />
 
 - 파라미터 수 비교
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/da42ec1f-127f-4f7e-9c80-7bd27fb7cbc7/image.png)
+<img width="550" alt="image" src="https://github.com/user-attachments/assets/f723eaf8-1c51-43cd-9274-4662114aaec4" />
 
 - 모델 사이즈 비교
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/98aee064-f005-4ade-b031-45bb5a818321/image.png)
+<img width="551" alt="image" src="https://github.com/user-attachments/assets/2d19996b-df98-474c-b38d-75d29f660ba1" />
 
 - FLOPs 비교
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/95b88243-fe97-4395-b414-aa1729876cf5/image.png)
+<img width="548" alt="image" src="https://github.com/user-attachments/assets/79085f47-a8e7-47f4-be57-1036922f4380" />
 
 - 추론 시간 비교(100회 추론 비교)
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/97dac0c7-4b85-41dd-aa16-1e826867c3a0/image.png)
+<img width="362" alt="image" src="https://github.com/user-attachments/assets/2249d4db-751b-45f8-8908-a7b1822a3dca" />
 
 <aside>
 💡
@@ -173,24 +168,20 @@ Knowledge Distillation을 통해 Student 모델들의 크기를 대폭 줄이면
 ### a. 30%, 50%, 70%로 진행
 
 - 잿슨나노의 CSI 카메라 사용 시의 추론 시간 비교
+<img width="294" alt="image" src="https://github.com/user-attachments/assets/0cd50756-563c-426b-aeb6-be46de190b7b" />
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/867b2fac-aeef-4e22-bf59-e8f17eeb406a/image.png)
 
 - 파라미터 수 비교
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/1b1c8b4a-edaa-45a9-bd00-d2097ed872db/image.png)
+<img width="553" alt="image" src="https://github.com/user-attachments/assets/d3b90034-dbca-452b-b127-c00f680cc07b" />
 
 - 모델 사이즈 비교
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/384bd8c7-1d60-4b97-b346-4131133c4c99/image.png)
+<img width="546" alt="image" src="https://github.com/user-attachments/assets/86498aae-7237-4ea6-a29f-39b7f607bf75" />
 
 - FLOPs 비교
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/c4680512-a8ca-4e14-a957-06e8733bd2c4/image.png)
+<img width="558" alt="image" src="https://github.com/user-attachments/assets/dd9e300d-0f5b-4c47-b897-e91f1a95df12" />
 
 - 추론 시간 비교(100회 평균)
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6336caf6-8680-43b9-a4b4-934deaf0affa/73fd268c-dd6b-4333-9e54-83798b8e4d58/image.png)
+<img width="488" alt="image" src="https://github.com/user-attachments/assets/d0070c70-f2e4-4a56-9d94-c60dca8b9097" />
 
 <aside>
 💡
